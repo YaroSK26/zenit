@@ -1,0 +1,523 @@
+body,
+html {
+    width: 1320px;
+    font-family: 'Jost', sans-serif;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.hodiny {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef9ee;
+    padding: 0 10px;
+}
+
+.zubzen {
+    color: #06a3da;
+    font-size: 30px;
+}
+
+.kontakt {
+    display: flex;
+    gap: 1px;
+}
+
+.kontakt p {
+    background-color: #06a3da;
+    color: white;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    width: 1320px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul button {
+    color: white;
+    background-color: #06a3da;
+    padding: 10px;
+    border: none;
+}
+
+
+/* main*/
+
+.main-bg img {
+    width: 1320px;
+    filter: grayscale(60%);
+    position: relative;
+    z-index: 10;
+}
+
+.zuby {
+    position: absolute;
+    z-index: 100;
+    left: 500px;
+    top: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.zuby div {
+    margin-left: 120px;
+}
+
+.zuby p,
+h1 {
+    color: white;
+}
+
+.uppercase,
+.zuby p {
+    text-transform: uppercase;
+}
+
+.zuby h1 {
+    text-align: center;
+    width: 500px;
+    font-size: 40px;
+}
+
+.btn1 {
+    color: white;
+    padding: 15px;
+    background-color: #06a3da;
+    border: none;
+}
+
+.btn2 {
+    color: white;
+    padding: 15px;
+    background-color: #f57e57;
+    border: none;
+}
+
+.tri-div {
+    display: flex;
+    color: white;
+}
+
+.div1,
+.div2,
+.div3 {
+    width: 500px;
+    padding: 10px;
+}
+
+.div1 {
+    background-color: #06a3da;
+}
+
+.div2 {
+    background-color: #091e3e;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div2 input,
+.div2 select {
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.div2 button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.div3 {
+    background-color: #f57e57;
+}
+
+.sluzby {
+    margin-top: 100px;
+    display: flex;
+}
+
+.sluzby .tvar img {
+    width: 500px;
+}
+
+.sluzby-part1 {
+    margin-left: 50px;
+}
+
+.sluzby-part1 h3 {
+    font-size: 24px;
+    color: #06a3da;
+}
+
+.sluzby-part1 h2 {
+    font-size: 40px;
+    display: flex;
+    color: #091e3e;
+}
+
+.nase-sluzby {
+    position: relative;
+    text-transform: uppercase;
+    color: #06a3da;
+}
+
+.specialisti-h2 {
+    font-size: 30px;
+}
+
+.hr-1 {
+    width: 30px;
+    background-color: #06a3da;
+    height: 5px;
+    border: none;
+}
+
+.hr-2 {
+    width: 10px;
+    background-color: #f57e57;
+    height: 5px;
+    border: none;
+}
+
+.hr-flex {
+    display: flex;
+    position: absolute;
+    top: 2px;
+    left: 180px;
+    gap: 5px;
+}
+
+.service-1 img {
+    width: 360px
+}
+
+.service-1 {
+    background-color: #eef9ee;
+}
+
+.service-1 p {
+    text-align: center;
+    color: #091e3e;
+    font-weight: bold;
+}
+
+.service-flex {
+    display: flex;
+    gap: 50px;
+}
+
+.sluzby2 {
+    margin-top: 20px;
+}
+
+.objednajte-sa-div {
+    background-color: #06a3da;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.objednajte-sa-div p:nth-child(3) {
+    font-size: 30px;
+}
+
+.price img {
+    width: 1320px;
+    height: 500px;
+}
+
+.price {
+    margin-top: 100px;
+    position: relative;
+}
+
+.price-div {
+    background-color: #06a3da;
+    width: 600px;
+    height: 300px;
+    opacity: 0.85;
+    top: 100px;
+    left: 400px;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+.price-div p {
+    padding: 0 10px;
+}
+
+.price-div h1 {
+    font-size: 40px;
+}
+
+.price-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.price-btn1 {
+    padding: 15px 20px;
+    color: white;
+    border-radius: 0;
+    background-color: #091e3e;
+    border: 0;
+}
+
+.price-btn2 {
+    border: 0;
+    padding: 15px 20px;
+    color: black;
+    border-radius: 0;
+}
+
+.cennik {
+    display: flex;
+    gap: 120px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.cennik-div1 {
+    width: 500px;
+}
+
+.cennik-div2,
+.cennik-div2 {
+    width: 300px;
+}
+
+.cennik h2 {
+    color: #091e3e;
+    font-size: 30px;
+}
+
+.cennik p:nth-child(4) {
+    color: #06a3da;
+}
+
+.cennik p:nth-child(5) {
+    color: #091e3e;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cennik-div2 img {
+    width: 300px;
+}
+
+.cennik-div2 {
+    background-color: #eef9ee;
+    position: relative;
+}
+
+.price-1 {
+    background-color: #eef9ee;
+    color: #06a3da;
+    font-weight: bold;
+    padding: 0;
+    font-size: 30px;
+    position: absolute;
+    top: 130px;
+    padding: 3px;
+    left: 120px;
+    border-radius: 5px;
+}
+
+.price-wrapper h3 {
+    text-align: center;
+}
+
+.price-wrapper {
+    border-bottom: 1px solid #06a3da;
+}
+
+.before-p {
+    width: 100px;
+    color: #06a3da;
+}
+
+.objednajte-sa-po-152-krat {
+    color: white;
+    padding: 15px 25px;
+    background-color: #06a3da;
+    border: 0;
+    font-size: 15px;
+    position: absolute;
+    top: 400px;
+    left: 80px;
+    font-weight: bold;
+}
+
+.objednajte-sa-po-153-krat {
+    color: white;
+    padding: 15px 25px;
+    background-color: #06a3da;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.p-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.specialisti {
+    position: relative;
+}
+
+.specialisti img {
+    width: 1320px;
+    margin-top: 100px;
+    height: 400px;
+}
+
+.specialisti-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 300px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.specialisti-div1 {
+    width: 300px;
+    background-color: #eef9ee;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.specialisti-div2,
+.specialisti-div3 {
+    width: 300px;
+    background-color: white;
+    position: relative;
+}
+
+.specialisti-div2 img {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.specialisti-h1 {
+    text-align: center;
+    color: #091e3e;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.specialisti-p {
+    text-align: center;
+    color: #06a3da;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #091e3e;
+    color: white;
+    display: flex;
+    gap: 50px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 700px;
+}
+
+.icons img {
+    background-color: #06a3da;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    gap: 5px;
+    background-color: #eef9ee;
+    justify-content: center;
+    position: absolute;
+    left: 80px;
+    top: 260px;
+    padding: 10px;
+}
+
+.wrapper-specialist {
+    background-color: #eef9ee;
+}
+
+.clock {
+    display: flex;
+}
+
+.clock img {
+    background-color: #06a3da;
+    width: 20px;
+    height: 20px;
+}
+
+.kontakt p img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin: 0 auto;
+}
+
+.tooth img {
+    width: 30px;
+    height: 30px;
+    background-color: #06a3da;
+    margin-right: 10px;
+}
+
+.font-bold {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.font-size {
+    font-size: 32px;
+}
