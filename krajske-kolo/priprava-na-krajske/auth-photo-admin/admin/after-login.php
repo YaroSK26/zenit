@@ -23,6 +23,8 @@
             // Nastavení ID uživatele
             $_SESSION["logged_in_user_id"] = $id;
 
+            $_SESSION["role"] = getUserRole($connection, $id);
+
             echo "<script>window.location.href = '../admin/login.php';</script>";
          }else{
             $error = "Chyba pri prihlaseni";

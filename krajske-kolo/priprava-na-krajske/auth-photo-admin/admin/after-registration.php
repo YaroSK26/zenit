@@ -10,13 +10,14 @@
         $priezvisko = $_POST["priezvisko"];
         $email = $_POST["email"];
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        $role = "user";
 
         // Check if the email is already registered
         if (isEmailRegistered($connection, $email)) {
             echo "email uz je zaregistrovany.";
             echo("<a href='../index.php'>spät</a>");
         } else {
-            $id = createUser($connection, $meno, $priezvisko, $email, $password);
+            $id = createUser($connection, $meno, $priezvisko, $email, $password, $role);
 
             if (!empty($id)) {
                 session_regenerate_id(true);
@@ -25,6 +26,8 @@
                 $_SESSION["is_logged_in"] = true;
                 // Nastavení ID uživatele
                 $_SESSION["logged_in_user_id"] = $id;
+
+                $_SESSION["role"] = $role;
 
                 echo "<script>window.location.href = '../admin/login.php';</script>";
             } else {

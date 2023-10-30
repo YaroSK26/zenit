@@ -6,6 +6,10 @@ session_start();
 if (!isLoggedIn()) {
         die("nepovoleny vstup");
 }
+
+$role = $_SESSION["role"];
+
+echo ($role);
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +21,13 @@ if (!isLoggedIn()) {
 </head>
 <body>
     si prihlaseny/zaregistrovany 
-
+    <a href="./upload-images/photos.php">photo</a>
     <a href="log-out.php">Odhlasit sa</a>
+
+    <?php if($role === "admin"): ?>
+            <h1>Si admiiiiiiiiiiin</h1>
+    <?php endif;?>
+
 </body>
 </html>
 
