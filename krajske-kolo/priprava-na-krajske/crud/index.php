@@ -38,7 +38,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -50,15 +49,20 @@
         <button>Odoslat</button>
     </form>
 
+    <h1>zoznam </h1>
+    <input type="text" placeholder="filter" class="filter-input">
+
     <?php if (empty($questbook)): ?>
         <p>nic tu neni podme domov</p>
     <?php else: ?>
-        <div>
+        <div class="all-quest">
             <?php foreach($questbook as $quest): ?>
-            <p>
+            <div class="one-quest">
+                <h2>
                 <?php echo htmlspecialchars($quest["Autor"]). " " . htmlspecialchars($quest["text2"]) ?>
-            </p>
-            <a href="one-quest.php?id=<?= $quest['ID'] ?>">Viac informacii</a>
+            </h2>
+                <a href="one-quest.php?id=<?= $quest['ID'] ?>">Viac informacii</a>
+            </div>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
@@ -68,4 +72,45 @@
 
 
 </body>
+
+<script>
+     const input = document.querySelector('.filter-input');
+     const oneQuest = document.querySelectorAll('.one-quest');
+     const allQuest = document.querySelector('.all-quest');
+
+     //quest to object 
+     oneQuestArray = Array.from(oneQuest);
+
+     const questObjects = oneQuestArray.map((o,index) => {
+        return {
+            id: index,
+            questsName: o.querySelector("h2").textContent,
+            questsLink: o.querySelector("a"),
+        }
+     })
+
+     input.addEventListener("keyup", () => {
+        const inputText = input.value.toLowerCase();
+
+
+        const filteredQuest = questObjects.filter((o) => {
+                return o.questsName.toLowerCase().includes(inputText) 
+        })
+
+        allQuest.textContent = ""
+
+        filteredQuest.map((o) => {
+            const newDiv =document.createElement("div")
+            newDiv.classList.add("one-quest")
+
+            const newH2 =document.createElement("h2")
+            newH2.textContent = o.questsName
+
+            newDiv.append(newH2)
+            newDiv.append(o.questsLink)
+            allQuest.append(newDiv)
+        })
+
+     })
+</script>
 </html>
