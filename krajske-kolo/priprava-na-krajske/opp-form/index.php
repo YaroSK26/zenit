@@ -240,6 +240,8 @@ try {
             $mail->Subject ="vyplneni formular";
             $mail->Body = "Jméno: {$meno} {$priezvisko} \nEmail: {$email} \nZpráva: {$text}" ;
 
+            //treba zmenit udaje pri uplodovani na internet
+
 
             $mail->send();
             echo "</br>";
