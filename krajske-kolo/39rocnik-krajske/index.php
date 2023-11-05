@@ -218,187 +218,12 @@
         </div>
       </section>
 
-<section
-  style="
-    width: 1140px;
-    background-color: #f7f7f7;
-    position: absolute;
-    text-align: center;
-    top: 2100px;
-    overflow: hidden;
-  "
->
-  <p style="color: #00bcd4; padding-top: 40px;">Hodnotenie</p>
-  <h1>Napisali o nás</h1>
-  <hr style="width: 80%; color: #f7f7f7; margin: 30px auto;">
-
-  <?php if (empty($comments)): ?>
-    <p>nic tu neni podme domov</p>
-  <?php else: ?>
-    <div class="comment-container">
-      <div class="comment" id="currentComment">
-        <span class="comment-icon" style="
-            background: linear-gradient(
-              90deg,
-              rgba(76, 22, 227, 1) 30%,
-              rgba(67, 67, 206, 1) 63%,
-              rgba(52, 143, 162, 1) 100%
-            );
-            border-radius: 100%;
-            width: 50px;
-            height: 50px;
-            padding: 15px;
-            color: white;
-            font-size: 60px;
-            font-weight: bold;
-            display: block;
-            margin: 0 auto;
-          ">&ldquo;</span>
-
-        <p class="comment-text"><?= $comments[0]["text2"] ?></p>
-        <span class="comment-author"><?= $comments[0]["meno"] ?></span><br />
-        <span class="comment-position" style="color: #00bcd4">
-          <?= $comments[0]["pozicia"] ?>
-        </span>
-      </div>
-    </div>
-
-    <div class="dots-container" style="display:flex; justify-content:center; align-items:center; gap:10px; margin:20px 0;">
-      <?php foreach ($comments as $index => $comment): ?>
-        <div class="dot" onclick="showComment(<?= $index ?>)">
-           <div
-              style="
-                width: 10px;
-                height: 10px;
-                background-color: #00bcd4;
-                border-radius: 100%;
-              "
-            ></div>
-      </div>
-      <?php endforeach; ?>
-    </div>
-
-    <script>
-      const comments = <?= json_encode($comments) ?>;
-      const currentComment = document.getElementById('currentComment');
-      const dots = document.querySelectorAll('.dot');
-      let currentIndex = 0;
-      let timerId;
-
-      function showComment(index) {
-        const comment = comments[index];
-        currentComment.innerHTML = `
-          <span class="comment-icon" style="
-              background: linear-gradient(
-                90deg,
-                rgba(76, 22, 227, 1) 30%,
-                rgba(67, 67, 206, 1) 63%,
-                rgba(52, 143, 162, 1) 100%
-              );
-              border-radius: 100%;
-              width: 50px;
-              height: 50px;
-              padding: 15px;
-              color: white;
-              font-size: 60px;
-              font-weight: bold;
-              display: block;
-              margin: 0 auto;
-            ">&ldquo;</span>
-          <p class="comment-text">${comment.text2}</p>
-          <span class="comment-author">${comment.meno}</span><br />
-          <span class="comment-position" style="color: #00bcd4">
-            ${comment.pozicia}
-          </span>
-        `;
-        currentIndex = index;
-
-        // Zrušenie predchádzajúceho časovača
-        clearTimeout(timerId);
-
-        // Nastavenie nového časovača
-        timerId = setTimeout(() => {
-          const nextIndex = (index + 1) % comments.length;
-          showComment(nextIndex);
-        }, 2000);
-      }
-
-      showComment(currentIndex);
-    </script>
-  <?php endif; ?>
-</section>
+      <?php  require "./components/comments.php"?>
 
 
     </main>
 
-    <footer style="position: absolute; top: 2530px ">
-      <div style="position: relative">
-        <img
-          style="width: 1140px; height: 300px"
-          src="./kk/images/footer-bg.jpg"
-          alt=""
-        />
-        <div
-          style="
-            color: white;
-            display: flex;
-            gap: 70px;
-            width: 1140px;
-            justify-content: center;
-            font-size: 12px;
-            position: absolute;
-            top: 20px;
-          "
-        >
-          <div style="width: 200px; ;display: flex; flex-direction: column; gap: 10px;">
-            <h3>Konfigurácie</h3>
-            <?php
-           foreach($offers as $offer): ?>
-             <span>
-              
-                <?= $offer["ponuka"] ?>
-            </span>
-            <?php endforeach; ?>
-          </div>
-          <div style="width: 300px;">
-            <h3>O nás</h3>
-            <span >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur adipisci aperiam, labore aliquam ut ex aliquid,
-              repudiandae quidem ab consequatur ducimus modi nobis vero
-              consequuntur neque quas tempora quibusdam tenetur!
-            </span>
-          </div>
-          <div style="width: 200px;">
-            <h3>Kontakty</h3>
-            <h4 style="display: flex">
-              Telefón:
-              <span style="color: #6A6A6A;">0900111222</span>
-            </h4>
-            <h4>
-              Email:
-              <span style="color: #6A6A6A;">ano@zenit@.sk</span>
-            </h4>
-            <h4>
-              Podpora:
-              <span style="color: #6A6A6A;">support@zenit.eu</span>
-            </h4>
-            <h4>
-              Web address:
-              <span style="color: #6A6A6A;">https://fcbani.eu</span>
-            </h4>
-          </div>
-         
-         
-          
-        </div>
-        <div  style="text-align: center; color: white; position: absolute; bottom: 30px; width: 1140px;">
-
-          <hr   style="width: 80%;"/>
-          <span style="font-size: 12px;">Copyright</span>
-        </div>
-      </div>
-    </footer>
+   <?php require "./components/footer.php" ?>
 
   </body>
 <script>
@@ -415,14 +240,7 @@
 
 
 
-
-
-
-
-
-
-
-
+//dialog
 
     function openDialog(ponuka, cena) {
         var dialog = document.getElementById(ponuka);
@@ -433,5 +251,8 @@
         var dialog = document.getElementById(ponuka);
         dialog.close();
     }
+
+
+
 </script>
 </html>
