@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <!-- automaticke vypisovanie textu -->
+      <div class="text-wrapper">
+          <h1 id="text">a</h1>
+
+          <div class="speed">
+              <label for="">Rychlost</label>
+              <input id="speed-input" step="1" value="1" min="1" max="5" type="number">
+          </div>
+      </div>
+
+      <!-- galeria 1  -->
+
+      <div class="gallery-wrapper">
+          <div class="slide img1 active">
+            <h2>Objavuj svet1</h2>
+          </div>
+          <div class="slide img2 ">
+            <h2>Objavuj svet2</h2>
+          </div>
+          <div class="slide img3 ">
+            <h2>Objavuj svet3</h2>
+          </div>
+          <div class="slide img4 ">
+            <h2>Objavuj svet4</h2>
+          </div>
+          <div class="slide img5 ">
+            <h2>Objavuj svet5</h2>
+          </div>
+      </div>
+
+      <!-- search -->
+
+      <div class="search  ">
+        <input class="input" type="text" placeholder="čo hladáš?">
+        <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+      </div>
+
+      <!-- galeria 2  -->
+
+  <div class="container-slider">
+
+    <div class="slide-left">
+        <div class="color-1-slide">
+             <h2>Neboj sa poznať nepoznané</h2>
+             <p>Všetko čo si chcel zažiť</p>
+        </div>
+        <div class="color-2-slide">
+            <h2>Neboj sa poznať nepoznané</h2>
+            <p>Všetko čo si chcel zažiť</p>
+        </div>
+        <div class="color-3-slide">
+            <h2>Neboj sa poznať nepoznané</h2>
+            <p>Všetko čo si chcel zažiť</p>
+        </div>
+        <div class="color-4-slide">
+            <h2>Neboj sa poznať nepoznané</h2>
+            <p>Všetko čo si chcel zažiť</p>
+        </div>
+    </div>
+
+
+   
+    <div class="slide-right">
+         <div class="image1"></div>
+         <div class="image2"></div>
+         <div class="image3"></div>
+         <div class="image4"></div>
+    </div>
+
+
+    <div class="arrow-buttons">
+        <div class=" arrow arrow-down"><img src="images/arrow-down.png" alt=""></div>
+        <div class=" arrow arrow-up"><img src="images/arrow-up.png" alt=""></div>
+    </div>
+</div>
+
+  <!-- filter -->
+
+  <div class="filter-wrapper">
+  <div class="filter-container">
+        <header class="header">
+            <h2 class="filter-heading">Filter uživatelov</h2>
+              <span class="filter-sub-heading">Hladat podle mena / lokality </span>
+            <input type="text" class="input-filter" placeholder="Vyhledat">
+        </header>
+    
+
+    <ul class="user-list">
+        <!-- <li>
+            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Martina">
+            <div class="user-information">
+                <h3>Martina Novotná</h3>
+                <p>České Budějovice, ČR</p>
+            </div>
+        </li>
+        <li>
+            <img src="https://randomuser.me/api/portraits/women/27.jpg" alt="Martina">
+            <div class="user-information">
+                <h3>Martina Novotná</h3>
+                <p>České Budějovice, ČR</p>
+            </div>
+        </li>
+        <li>
+            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Martina">
+            <div class="user-information">
+                <h3>Martina Novotná</h3>
+                <p>České Budějovice, ČR</p>
+            </div>
+          </li> -->
+          <li>Načítání...</li> 
+    </ul>
+    </div>
+    </div>
+
+
+    
+
+  </body>
+  <script src="script.js"></script>
+</html>

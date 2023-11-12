@@ -4,9 +4,7 @@
   style="
     width: 1140px;
     background-color: #f7f7f7;
-    position: absolute;
     text-align: center;
-    top: 2100px;
     overflow: hidden;
   "
 >

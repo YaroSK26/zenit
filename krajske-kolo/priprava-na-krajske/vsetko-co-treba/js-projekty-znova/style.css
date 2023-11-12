@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*automaticke vypisovanie textu*/
+
+
+.text-wrapper{
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.speed input{ 
+    width: 30px;
+}
+
+/* gallery 1  */
+
+.gallery-wrapper {
+    height: 100vh;
+    background-color: rgb(64, 29, 161);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.img1{
+    background-image: url(images/obr1.jpg);
+}
+.img2{
+    background-image: url(images/obr2.jpg);
+}
+.img3{
+    background-image: url(images/obr3.jpg);
+}
+.img4{
+    background-image: url(images/obr4.jpg);
+}
+.img5{
+    background-image: url(images/obr2.jpg);
+}
+
+.slide{
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5 ;
+    position: relative;
+    margin: 5px;
+    transition: flex 0.5s ease-out;
+}
+
+.slide h2 {
+    font-size: 25px;
+    bottom: 20px;
+    left:20px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+.slide.active {
+    flex: 4;
+}
+
+.slide.active h2 {
+    opacity: 1;
+    transition: opacity 0.2 ease-in-out;
+}
+
+/*search*/
+
+.search{
+    height: 100vh;
+    background-color: rgb(10, 17, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.search input {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    transition: width 1s ease-in;
+}
+.btn {
+    width: 55px;
+    height: 55px;
+     position: absolute;
+     top: 295px;
+     cursor: pointer;
+      transition: transform 1s ease-in;
+}
+.btn:focus,.search input:focus, .search:focus{
+    outline: none ;
+}
+
+.search.active input {
+    width: 200px;
+    transition: width 1s ease-in;
+}
+
+.search.active .btn {
+       transform: translateX(129px);
+       transition: transform 1s ease-in;
+}
+
+
+/*galeria 2 */
+
+.container-slider{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+/* lava ccaszt*/
+.slide-left h2{
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.slide-left{
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s linear;
+}
+.slide-left > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+}
+.color-1-slide{
+    
+    background-color: rgb(23, 83, 26);
+}
+.color-2-slide {
+    
+    background-color: rgb(123, 147, 123);
+}
+.color-3-slide {
+    background-color: rgb(65, 65, 71);
+}
+.color-4-slide {
+    background-color: rgb(199, 138, 25);
+}
+/* prava cast*/
+.slide-right{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transition: transform 0.5s linear;
+}
+.slide-right > div{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.image1{
+    background-image: url(images/obr1.jpg);
+}
+.image2 {
+    background-image: url(images/obr2.jpg);
+}
+.image3 {
+    background-image: url(images/obr3.jpg);
+}
+.image4 {
+    background-image: url(images/obr4.jpg);
+}
+/* icons */
+.arrow-buttons .arrow{
+    position: absolute;
+    z-index: 100;
+    left: 35%;
+    top: 50%;
+}
+.arrow img{width: 50px;}
+.arrow-down{
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.arrow-down img:hover{border: 1px solid black;}
+.arrow-up img:hover{border: 1px solid black;}
+.arrow-up{
+    transform: translateY(-95%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* filter */
+
+.filter-wrapper{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.filter-container {
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+
+.filter-sub-heading {
+    display: block;
+    margin: 5px 0 20px 0;
+    opacity: 0.9;
+}
+
+.header {
+    background-color: #2f2fda;
+    color: #fff;
+    padding: 35px 20px;
+}
+
+.input-filter {
+    background-color: rgba(0,0,0,0.2);
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 15px;
+    width: 100%;
+    outline: none;
+}
+
+
+
+.user-list {
+    background-color: #fff;
+    list-style-type: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.user-list li {
+    display: flex;
+    padding: 20px;
+}
+
+.user-list img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.user-information {
+    margin-left: 10px;
+}
+
+.user-information h3 {
+    margin-bottom: 10px;
+}
+
+.user-information p {
+    font-size: 14px;
+}
+
+.user-list li {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.user-list li.hide {
+    display: none;
+}

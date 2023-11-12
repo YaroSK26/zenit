@@ -56,7 +56,6 @@
     <?php endif; ?>
 </body>
 
-<script>
     <?php
         function resetPonuka($userId, $connection) {
             try {
@@ -101,5 +100,4 @@
             }
         }
     ?>
-</script>
 </html>

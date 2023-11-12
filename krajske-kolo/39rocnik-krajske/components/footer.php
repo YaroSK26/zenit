@@ -1,4 +1,4 @@
-<footer style="position: absolute; top: 2530px ">
+<footer>
       <div style="position: relative">
         <img
           style="width: 1140px; height: 300px"
