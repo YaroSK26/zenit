@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700");
 body,
 html {
     width: 1320px;
     font-family: 'Jost', sans-serif;
     margin: 0 auto;
+    scroll-behavior:smooth;
 }
 
 .header {
@@ -620,6 +622,7 @@ footer p a {
     height: 650px;
     position: absolute;
     top: 95px;
+    background-size: cover;
 }
 
 .specialisti-div2:hover {

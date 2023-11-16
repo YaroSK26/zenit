@@ -491,3 +491,33 @@ function dataFilter(inputText) {
 //   colorfulBox.style.backgroundColor = getRandomColor();
 // }
 // </script>
+
+
+
+
+
+//rest api 
+// const apiUrl = 'https://api.example.com/data';
+// const accessToken = 'YOUR_ACCESS_TOKEN';
+
+//  Vytvorte HTTP GET požiadavku s hlavičkou pre autentifikáciu
+
+// fetch(apiUrl, {
+//   method: 'GET',
+//   headers: {
+//     'Authorization': `Bearer ${accessToken}`,
+//     'Content-Type': 'application/json' // Nastavte obsah na JSON, ak je to potrebné
+//   }
+// })
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(`Chyba pri komunikácii s API: ${response.status}`);
+//     }
+//     return response.json(); // Rozparsovanie odpovede vo formáte JSON
+//   })
+//   .then(data => {
+//     console.log('Dáta získané z API:', data);
+//   })
+//   .catch(error => {
+//     console.error('Chyba:', error);
+//   });

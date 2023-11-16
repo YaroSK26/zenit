@@ -27,6 +27,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
     </head>
 
     <body>
@@ -66,8 +67,8 @@
                 <img src="./images/bg-1.jpg" alt="">
 
                 <div class="zuby">
-                    <p>Zuby zdravé, úspev krásny: Starajte sa o svoje ústa každý deň!</p>
-                    <h1>Získaje najlepšiu zubnú staroslivosť.</h1>
+                    <p>Zuby zdravé, úsmev krásny: Starajte sa o svoje ústa každý deň!</p>
+                    <h1>Získajte najlepšiu zubnú staroslivosť.</h1>
                     <div class="zuby-buttons">
                         <button class="btn1 button1">Objednajte sa</button>
                         <button class="btn2 button2">Kontaktuje nás</button>
@@ -333,22 +334,22 @@ let x = 0;
 const forwardArrow = document.querySelector('.arrow1');
 const backwardArrow = document.querySelector('.arrow2');
 const cennikDiv = document.querySelector('.cennik-overflow');
-const cennikDivWidth = cennikDiv.scrollWidth;
+const cennikDivWidth = cennikDiv.scrollWidth - cennikDiv.clientWidth;
 
-
-
-forwardArrow.addEventListener('click', function() {
-    if (x > 0) {
-        x -= 300;
-        cennikDiv.scrollTo(x, 0);
+forwardArrow.addEventListener('click', function () {
+    x += 300;
+    if (x > cennikDivWidth) {
+        x = 0;
     }
+    cennikDiv.scrollTo(x, 0);
 });
 
-backwardArrow.addEventListener('click', function() {
-    if (x < cennikDivWidth - cennikDiv.clientWidth) {
-        x += 300;
-        cennikDiv.scrollTo(x, 0);
+backwardArrow.addEventListener('click', function () {
+    x -= 300;
+    if (x < 0) {
+        x = cennikDivWidth;
     }
+    cennikDiv.scrollTo(x, 0);
 });
 
 
