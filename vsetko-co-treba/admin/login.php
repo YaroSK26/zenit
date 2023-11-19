@@ -28,7 +28,6 @@ $role = $_SESSION["role"];
         
     include "../assets/database.php";
 
-    
 
     $autor = $_POST["Autor"];
     $text2 = $_POST["text2"];
@@ -91,7 +90,6 @@ $role = $_SESSION["role"];
         </div>
     <?php endif; ?>
 </div>
-
 
 </body>
 

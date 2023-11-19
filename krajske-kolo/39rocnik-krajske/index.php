@@ -141,13 +141,7 @@
                     <div
                         style="
                           margin: 0 auto;
-                           <?= $offer["cena"] == 30 ? ' background: linear-gradient(
-                          90deg,
-                          rgba(76, 22, 227, 1) 30%,
-                          rgba(67, 67, 206, 1) 63%,
-                          rgba(52, 143, 162, 1) 100%
-                        );' : ' background-color :#00bcd4;' ?>;
-                          display: flex;
+                            display: flex;
                           justify-content: center;
                           align-items: center;
                           text-align: center;
@@ -155,8 +149,12 @@
                           text-transform: uppercase;
                           height: 100px;
                           width: 150px;
-                        "
-                    >
+                           <?= $offer["cena"] == 30 ? ' background: linear-gradient(
+                          90deg,
+                          rgba(76, 22, 227, 1) 30%,
+                          rgba(67, 67, 206, 1) 63%,
+                          rgba(52, 143, 162, 1) 100%
+                        );' : ' background-color :#00bcd4;' ?>;">
                         <h1>
                             <span style="font-size: 28px"><?= $offer["cena"] ?>€ </span> <br />
                             <span style="font-size: 16px">mesačne</span>
@@ -211,11 +209,8 @@
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
-
         </div>
-
-
-        </div>
+      </div>
       </section>
 
       
@@ -358,7 +353,6 @@
             <?php
            foreach($offers as $offer): ?>
              <span>
-              
                 <?= $offer["ponuka"] ?>
             </span>
             <?php endforeach; ?>
@@ -391,12 +385,8 @@
               <span style="color: #6A6A6A;">https://fcbani.eu</span>
             </h4>
           </div>
-         
-         
-          
         </div>
         <div  style="text-align: center; color: white; position: absolute; bottom: 30px; width: 1140px;">
-
           <hr   style="width: 80%;"/>
           <span style="font-size: 12px;">Copyright</span>
         </div>
@@ -415,8 +405,6 @@
       navbar.classList.remove("scrolled");
     }
   });
-
-
 
 //dialog
 

@@ -15,7 +15,6 @@
     $sql = "SELECT * FROM pricelist";
     $result = mysqli_query($connection,$sql);
     $pricelist = mysqli_fetch_all($result, MYSQLI_ASSOC);
-   
 
 ?>
 

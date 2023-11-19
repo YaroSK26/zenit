@@ -30,7 +30,7 @@
 
             
             if (updateStudent($connection, $autor, $text2, $id)) {
-                 echo "<script>window.location.href = 'index.php';</script>";
+                 echo "<script>window.location.href = 'login.php';</script>";
             }
 } 
 ?>
