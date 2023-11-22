@@ -22,7 +22,7 @@
     <form method="POST">
     Fakt to chces zmazat? 
     <button>delete</button>
-    <a href="one-quest.php?id=<?= $ziaci[0]['ID'] ?>">cancel</a>
+    <a href="login.php">cancel</a>
     </form>
 </body>
 </html>

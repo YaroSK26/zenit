@@ -150,7 +150,7 @@ function dataFilter(inputText) {
 
 //!dalsie js kody ked tak , 
 
-//  Lokalne ukladanie údajov pomocou localStorage:
+//!  Lokalne ukladanie údajov pomocou localStorage:
 
 // <!-- HTML -->
 // <input type="text" id="username" placeholder="Enter your username">
@@ -176,7 +176,7 @@ function dataFilter(inputText) {
 
 
 
-//lazy loading
+//!lazy loading
 
 // <!-- HTML -->
 // <img data-src="image.jpg" alt="Lazy-loaded image" id="lazyImage">
@@ -194,7 +194,7 @@ function dataFilter(inputText) {
 
 
 
-// Sledovanie polohy (Geolocation):
+//! Sledovanie polohy (Geolocation):
 
 // <!-- HTML -->
 // <button onclick="getLocation()">Get Location</button>
@@ -220,7 +220,7 @@ function dataFilter(inputText) {
 
 
 
-//  Dynamické generovanie obsahu pomocou JSON:
+//!  Dynamické generovanie obsahu pomocou JSON:
 
 // <!-- HTML -->
 // <ul id="myList"></ul>
@@ -245,7 +245,7 @@ function dataFilter(inputText) {
 
 
 
-// Vytváranie a manipulácia s cookies:
+//! Vytváranie a manipulácia s cookies:
 
 // <!-- HTML -->
 // <input type="text" id="cookieValue" placeholder="Enter cookie value">
@@ -264,7 +264,7 @@ function dataFilter(inputText) {
 
 
 
-// Získavanie dát z JSON API:
+//! Získavanie dát z JSON API:
 
 // <!-- HTML -->
 // <ul id="usersList"></ul>
@@ -292,7 +292,7 @@ function dataFilter(inputText) {
 
 
 
-//  Ovládanie videa pomocou HTML5 Video API:
+//!  Ovládanie videa pomocou HTML5 Video API:
 
 // <!-- HTML -->
 // <video id="myVideo" width="320" height="240" controls>
@@ -320,7 +320,7 @@ function dataFilter(inputText) {
 
 
 
-//  Jednoduchý slider pomocou JavaScriptu:
+// ! Jednoduchý slider pomocou JavaScriptu:
 
 // <!-- HTML -->
 // <div id="slider" class="slider">
@@ -368,7 +368,7 @@ function dataFilter(inputText) {
 
 
 
-//  Ovládanie udalostí klávesnice:
+//!  Ovládanie udalostí klávesnice:
 
 // <!-- JavaScript -->
 // <script>
@@ -385,7 +385,7 @@ function dataFilter(inputText) {
 
 
 
-// Vytváranie jednoduchého časovača:
+//! Vytváranie jednoduchého časovača:
 
 // <!-- HTML -->
 // <div id="timer">0:00</div>
@@ -420,7 +420,7 @@ function dataFilter(inputText) {
 
 
 
-//  Drag and Drop:
+//!  Drag and Drop:
 
 // <!-- HTML -->
 // <div id="draggableElement" draggable="true" ondragstart="drag(event)">Drag me!</div>
@@ -450,7 +450,7 @@ function dataFilter(inputText) {
 
 
 
-// 32. Sledovanie veľkosti okna pre responsívne správanie:
+//! Sledovanie veľkosti okna pre responsívne správanie:
 
 // <!-- JavaScript -->
 // <script>
@@ -469,7 +469,7 @@ function dataFilter(inputText) {
 
 
 
-//  Dynamické zmeny farby pozadia:
+//!  Dynamické zmeny farby pozadia:
 // html
 // Copy code
 // <!-- HTML -->
@@ -496,7 +496,7 @@ function dataFilter(inputText) {
 
 
 
-//rest api 
+//!rest api 
 // const apiUrl = 'https://api.example.com/data';
 // const accessToken = 'YOUR_ACCESS_TOKEN';
 

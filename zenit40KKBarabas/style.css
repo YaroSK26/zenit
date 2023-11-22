@@ -1,27 +1,351 @@
-@import url("");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 /*zakladne */
 
-body,html,:root {
-    width: 1320px;
+body,html {
+    width: 1140px;
     margin: 0 auto;
     text-align: center;
-    margin: 0 auto ;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Roboto;
 }
 
-a {
-    text-decoration: none;
-}
+
 button {
     border: none;
+    cursor: pointer;
+}   
+
+
+h1 {
+        font-family: Patua;
 }
 
+p {
+        font-family: Roboto;
+        font-style: italic;
+}
+
+img {
+    background-size: cover;
+}
 /*header*/
-
-
-
 /*main*/
 /*footer*/
+
+
+.head-img img {
+    background: url;
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: grayscale(20%);
+}
+
+.flex-head {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+}
+.header {
+    position: absolute;
+    text-align: left;
+    color: white ;
+    top: 200px;
+    left: 300px;
+}
+
+
+.header-form {
+    position: absolute;
+      color: white ;
+      display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    top: 200px;
+    left: 800px;
+    }
+
+
+
+
+.header-form input {
+    width: 350px;
+    height: 50px;
+    border: none !important;
+}
+
+.header-form button {
+     border: 2px solid white ;
+        padding: 10px;
+        color: white;
+        background-color: #E4E2E0 ;
+        height: 50px;
+        text-align: center;
+        margin-left: 255px;
+        font-weight: bold;
+
+}
+
+
+
+/*number*/
+
+
+.number{
+    background-color: #E4E2E0;
+    width: 1140px;
+    height: 300px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.number div h1 {
+    font-size: 100px;
+    color: white;
+    margin: 0;
+    font-family: Patua;
+}
+
+.number div h2 {
+    font-size: 30px;
+    font-family: Patua;
+    color: #525B64;
+}
+
+.number div p {
+    color: #525B64;
+    width: 300px;
+    font-style: italic;
+}
+
+/*images-3*/
+.section-image-3 {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+        .images-3:hover {
+    filter: grayscale(0%);
+    color: black;
+    transition: filter 0.25s;
+    transition: color 0.25s;
+}
+
+.images-3{
+      display: flex;
+      flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+    color: white ;
+     transition: filter 0.25s;
+     transition: color 0.25s;
+}
+}
+
+.images-3{
+      display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black ;
+     transition: filter 0.25s;
+     transition: color 0.25s;
+}
+
+
+.images-3 img {
+    width: 380px;
+    height: 350px;
+}
+
+.images-div {
+    position: absolute;
+    top: 0;
+    width: 380px;
+    height: 350px;
+}
+
+.images-div h1 {
+    font-size: 30px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+}
+
+.button{
+    position: absolute;
+    right: 110px;
+    top: 200px;
+    width: 150px;
+      border: 2px solid white ;
+        padding: 10px;
+        color: white;
+        background-color: #E4E2E0 ;
+        height: 50px;
+        text-align: center;
+        margin-left: 255px;
+        font-weight: bold;
+        transition: background-color 0.25s;
+}
+
+
+
+/*4 images*/
+
+
+
+
+@media screen and (min-width: 768px) {
+    .images-4:hover > .image-1 h1 {
+    color: black;
+    transition: color 0.25s;
+}
+
+.images-3:hover > .button{
+        background-color: transparent;
+    transition: background-color 0.25s;
+    
+}
+
+  .images-4:hover{
+        filter: grayscale(0%);
+    color: black;
+    transition: filter 0.25s;
+    transition: color 0.25s;
+}
+
+.images-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+   filter: grayscale(100%);
+    color: white ;
+     transition: filter 0.25s;
+    
+}
+}
+
+
+.images-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    color: black ;
+     transition: filter 0.25s;
+     overflow: hidden;
+    
+}
+
+
+
+
+.image-1 img, .image-2 img, .image-3 img , .image-4 img{
+     width: 270px;
+    height: 200px;
+}
+
+
+.image-1 h1  {
+    position: absolute;
+    color: white;
+    top: 80px;
+    margin-left: 50px;
+    width: 200px;
+    font-size: 30px;
+    transition: filter 0.25s;
+     transition: color 0.25s;
+}
+
+
+
+/*apre*/
+
+.apre {
+    color: #525B64 ;
+    margin-bottom:50px;
+    margin-top:50px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.image-6  img{
+    width: 100px;
+}
+
+.image-6 {
+    width: 300px;
+}
+
+
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #525B64;
+}
+
+footer div {
+    width: 380px;
+}
+
+footer div img {
+    width: 360px;
+    height: 250px;
+}
+
+footer div div h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.special {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.footer{
+    background-color: #525B64;
+    width: 1140px;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: underline;
+    color: #E4E2E0;
+}
