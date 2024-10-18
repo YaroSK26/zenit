@@ -17,12 +17,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
-    <form method="POST">
-    Fakt to chces zmazat? 
-    <button>delete</button>
-    <a href="login.php">cancel</a>
-    </form>
+    <center>
+        <form method="POST">
+            Are you sure you want to delete this? 
+            <span>
+                <button type="submit">delete</button>
+            </span>
+        </form>
+        <a class="button" href="login.php"><button> cancel</button></a>
+    </center>
 </body>
 </html>

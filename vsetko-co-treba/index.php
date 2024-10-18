@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    
+        <link rel="stylesheet" href="./style.css">    
 </head>
 <body>
-    <h1>Registracia  </h1>
-    <form action="./admin/after-registration.php" method="POST">
-            <input required type="text" placeholder="meno" name="meno"><br>
-            <input required type="text" placeholder="priezivsko" name="priezvisko"><br>
-            <input required type="email" placeholder="email" name="email"><br>
-            <input  class="password1" required type="password" placeholder="password" name="password"><br>
-            <input  class="password2" required type="password" placeholder="password again" name="password-again"><br>
-            <input type="submit" value="Zaregistrovat">
-            <p class="result-text"></p>
-    </form>
+    <center >
+        <section class="container">
 
-    <h1>Prihlasenie</h1>
-    <form method="POST" action="./admin/after-login.php">
-            <input required type="email" name="login-email" placeholder="email"><br>
-            <input  required type="password" name="login-password" placeholder="password" ><br>
-            <input type="submit" value="Prihlasit sa">
+       
+    <div>
+    <h1>Registration</h1>
+    <form action="./admin/after-registration.php" method="POST">
+            <input required type="text" placeholder="Name" name="meno"><br>
+            <input required type="text" placeholder="Surname" name="priezvisko"><br>
+            <input required type="email" placeholder="Email" name="email"><br>
+            <input  class="password1" required type="password" placeholder="Password" name="password"><br>
+            <input  class="password2" required type="password" placeholder="Password again" name="password-again"><br>
+            <p class="result-text"></p>
+            <button>sign up</button>
     </form>
+    </div>
+
+    <div>
+    <h1>Login</h1>
+    <form method="POST" action="./admin/after-login.php">
+            <input required type="email" name="login-email" placeholder="Email"><br>
+            <input  required type="password" name="login-password" placeholder="Password" ><br>
+            <button>sign in</button>
+    </form>
+    </div>
+    </center>
+     </section>
 </body>
     <script>
         //password checker
@@ -37,9 +46,9 @@
             const password2Value= password2.value;
 
             if (password1Value===password2Value) {
-                paragraphText.textContent = "hesla su rovnake"
+                paragraphText.textContent = "Passwords are the same"
             }else{
-                paragraphText.textContent = "hesla sa nezhoduju" 
+                paragraphText.textContent = "Passwords don't match" 
             }
 
             if (password1Value === "" && password2Value === "") {
@@ -52,9 +61,9 @@
             const password2Value= password2.value;
 
             if (password1Value===password2Value) {
-                paragraphText.textContent = "hesla su rovnake "
+                paragraphText.textContent = "asswords are the same"
             }else{
-                paragraphText.textContent = "hesla sa nezhoduju" 
+                paragraphText.textContent = "Passwords don't match" 
             }
             if (password1Value === "" && password2Value === "") {
                 paragraphText.textContent = ""

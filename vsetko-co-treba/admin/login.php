@@ -48,14 +48,27 @@ $role = $_SESSION["role"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css">    
 </head>
 <body>
-    si prihlaseny/zaregistrovany 
-    <a href="formular.php">formular</a>
-    <a href="log-out.php">Odhlasit sa</a>
+    <p class="nav">
+    You are  Registered/Logged! <br>
+    
+        <a href="formular.php"><button>Contact</button></a>
+    
+    
+        <a href="log-out.php"><button>Sign out</button></a>
+    
+    </p>
 
     <?php if($role === "admin"): ?>
-            <h1>Si admiiiiiiiiiiin</h1>
+        <center>
+            <h3>You are admin</h3>
+        </center>    
+         <?php else: ?>
+            <center>
+            <h3>You are not admin</h3>
+        </center>  
     <?php endif;?>
 
 
@@ -65,26 +78,27 @@ $role = $_SESSION["role"];
 
 
     <div class="container">
+        <h1>Create a  character</h1>
     <form  method="POST" action="login.php" class="book">
-        <input type="text" name="Autor" placeholder="autor" required  value="<?= htmlspecialchars($autor) ?>"><br>
+        <input type="text" name="Autor" placeholder="Name of your character" required  value="<?= htmlspecialchars($autor) ?>"><br>
 
-        <textarea required  id="mainTextarea" placeholder="text" cols="30" rows="10" name="text2"  value="<?= htmlspecialchars($text2) ?>"></textarea><br>
-        <button>Odoslat</button>
+        <textarea required  id="mainTextarea" placeholder="Describe your character" cols="30" rows="10" name="text2"  value="<?= htmlspecialchars($text2) ?>"></textarea><br>
+        <button>Send</button>
     </form>
 
-    <h1>zoznam </h1>
+    <h1>List of your characters </h1>
     <input type="text" placeholder="filter" class="filter-input">
 
     <?php if (empty($ziaci)): ?>
-        <p>nic tu neni podme domov</p>
+        <p>You haven't created your character yet</p>
     <?php else: ?>
         <div class="all-quest">
             <?php foreach($ziaci as $quest): ?>
             <div class="one-quest">
                 <h2>
-                <?php echo htmlspecialchars($quest["Autor"]). " " . htmlspecialchars($quest["text2"]) ?>
+                <?php echo htmlspecialchars($quest["Autor"]) ?>
+                    <a href="one-quest.php?id=<?= $quest['ID'] ?>"><button>More info</button></a>
             </h2>
-                <a href="one-quest.php?id=<?= $quest['ID'] ?>">Viac informacii</a>
             </div>
             <?php endforeach; ?>
         </div>
